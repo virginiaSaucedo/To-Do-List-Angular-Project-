@@ -1,0 +1,224 @@
+//Import
+
+@import "~bootstrap/dist/css/bootstrap.min.css";
+
+@import url("https://fonts.googleapis.com/css?family=Montserrat&display=swap");
+
+@import "../../node_modules/@fortawesome/fontawesome-free/css/all.css";
+/* ******* Variables *******
+*/
+
+//Colors
+
+$darkThemeColor: #042930;
+$themeColor: #3f92b3;
+$lightThemeColor: rgb(141, 168, 179);
+$secondaryColor: #bf3249;
+$lightGray: #f1f1f1;
+$mediumGray: #a1a1a1;
+$darkGray: #181818;
+
+$green: #37b637;
+$darkGreen: #3e8b3e;
+
+$yellow: #e7d912;
+$darkYellow: #a79d1d;
+
+$orange: #ee0800;
+$darkOrange: #a5201b;
+//Typo
+
+$montserrat: "Montserrat", sans-serif;
+$open-sans: "Open Sans", sans-serif;
+
+// Sizes
+
+$h1-size-4x: 52px; //PC
+$h1-size-3x: 52px; //laptop
+$h1-size-2x: 52px; //Tablet
+$h1-size-1x: 52px; //mobile
+
+///Width
+
+$btn-width: 100px;
+
+///Padding
+
+$title-padding: 50px;
+$div-padding: 10px;
+$list-padding: 5px 10px;
+$padding: 10px 0px;
+///Margin
+
+// Border
+
+$bRadius-div: 10px;
+
+/* ********
+
+Typography
+
+***********
+
+*/
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: $montserrat;
+  font-weight: bold;
+}
+
+p,
+input,
+a,
+li,
+button,
+select {
+  font-family: $montserrat;
+  color: $darkThemeColor;
+}
+
+h1 {
+  font-size: $h1-size-4x;
+}
+//End Typography
+
+body {
+  background: $lightGray;
+}
+.container-fluid.title {
+  background-color: $darkThemeColor;
+
+  padding: $title-padding;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  h1 {
+    color: $lightGray;
+  }
+}
+
+.row {
+  padding: $title-padding;
+  .tl-table {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+
+    padding: $div-padding;
+
+    h1,
+    h2,
+    h3 {
+      text-align: center;
+      vertical-align: middle;
+    }
+
+    h2 {
+      color: $lightThemeColor;
+    }
+
+    h3 {
+      color: $darkGray;
+    }
+    ul {
+      flex-direction: column;
+      display: flex !important;
+      margin-block-start: 0 !important;
+      padding-inline-start: 0px !important;
+      width: 100%;
+    }
+    .item.no-border-bottom {
+      border: none;
+    }
+    .item {
+      list-style: none;
+      //padding: $list-padding;
+      border-bottom: 1px solid $mediumGray;
+      width: 100%;
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      
+      .done{
+        color: $mediumGray;
+        text-decoration: line-through;
+      }
+
+      form {
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        margin: 50px 0px;
+
+        input {
+          height: 40px;
+          width: 100%;
+          background: transparent;
+          border: none;
+          border-bottom: 2px solid $darkThemeColor;
+        }
+        input:focus {
+          border: none;
+          outline: none;
+          box-shadow: 0px 2px 0px 0px rgba(63, 146, 179, 1);
+        }
+        .submit {
+          background-color: $darkThemeColor;
+        }
+        .submit:hover {
+          background-color: $lightThemeColor;
+        }
+        .submit:disabled{
+            background-color: $lightThemeColor;
+        }
+      }
+      .btn {
+        width: $btn-width;
+        margin: 0px 5px;
+      }
+      .btn-div {
+        padding: $padding;
+        width: $btn-width * 3;
+        right: 0px;
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+        flex-direction: row;
+
+        i {
+          color: #fff;
+        }
+
+        .finish-btn {
+          background-color: $green;
+        }
+        .finish-btn:hover {
+          background-color: $darkGreen;
+          transition: ease-in-out 0.34s all;
+        }
+        .refrash-btn {
+          background-color: $yellow;
+        }
+        .refrash-btn:hover {
+          background-color: $darkYellow;
+          transition: ease-in-out 0.34s all;
+        }
+        .remove-btn {
+          background-color: $orange;
+        }
+        .remove-btn:hover {
+          background-color: $darkOrange;
+          transition: ease-in-out 0.34s all;
+        }
+      }
+    }
+  }
+}
